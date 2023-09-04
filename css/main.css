@@ -2376,8 +2376,28 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .banner-area {
     background: url(../img/banner-bg.jpg) center;
-    background-size: cover
+    background-size: cover;
+    animation: carousel 15s infinite; 
 }
+
+
+@keyframes carousel {
+    0% {
+        background: url(../img/banner-bg.jpg) center;
+    background-size: cover;
+    }
+    50% {
+        background: url(../img/home1.jpg) center;
+        background-size: cover;
+    }
+    
+    75% {
+        background: url(../img/home3.png) center;
+    background-size: cover;
+    }
+   
+}
+
 
 @media (max-width: 767.98px) {
     .banner-area .fullscreen {
@@ -2589,7 +2609,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .feature-area {
-    background-color: #c6b069
+    background-image: linear-gradient( 184.1deg,  rgba(249,255,182,1) 44.7%, rgba(226,255,172,1) 67.2% );
 }
 
 .feature-area .single-feature {
@@ -2728,7 +2748,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .callto-action-wrap p {
     max-width: 560px;
-    margin: 20px 0
+    margin: 10px 0
 }
 
 .callto-action-wrap .primary-btn {
@@ -2830,11 +2850,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .brands-area {
-    background-color: #f9f9ff
+    background-color: #f9f9ff;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .brands-area .brand-wrap {
-    padding: 40px 0
+    padding: 15px 0;
+    display: inline-block;
+    animation: scrollText 20s linear infinite; 
 }
 
 .brands-area .brand-wrap .owl-carousel .owl-item img {
@@ -2862,6 +2886,14 @@ body.mobile-nav-active #mobile-nav-toggle {
     -o-filter: grayscale(0%);
     filter: grayscale(0%);
     opacity: 1
+}
+@keyframes scrollText {
+    0% {
+        transform: translateX(0%); /* Start from right edge of container */
+    }
+    100% {
+        transform: translateX(-100%); /* End at left edge of container */
+    }
 }
 
 .footer-area {
